@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+  
+    <!-- JDBC Database connection settings -->
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">  
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+        <property name="url" value="jdbc:mysql://localhost:3306/hb_student_tracker?useSSL=false"></property>
+        <property name="username" value="hbstudent"></property>
+        <property name="password" value="hbstudent"></property>
+     </bean>
+      
+<bean id="mysessionFactory"
+        class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+        <property name="dataSource" ref="dataSource" />
+        <property name="mappingResources">
+            <list>
+                <value>student.hbm.xml</value>
+            </list>
+        </property>
+          
+        <property name="hibernateProperties">  
+            <props>  
+		        <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>  
+		        <prop key="hibernate.hbm2ddl.auto">update</prop>  
+                <prop key="hibernate.show_sql">true</prop>  
+                  
+            </props>  
+        </property>  
+    </bean>  
+      
+    <bean id="template" class="org.springframework.orm.hibernate3.HibernateTemplate">  
+    <property name="sessionFactory" ref="mysessionFactory"></property>  
+    </bean>  
+      
+    <bean id="d" class="com.shubham.SpringHibernateAssignment.StudentDAO">  
+    <property name="template" ref="template"></property>  
+    </bean>  
+    
+    
+  
+      
+    </beans>  

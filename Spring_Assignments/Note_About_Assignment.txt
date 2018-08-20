@@ -1,0 +1,28 @@
+
+Java Classes Paths for the Assignments :- 
+
+1. Spring Basics - Assignment 1:
+
+	 Spring_Assignments -> SpringJDBC -> src -> main -> java -> com -> shubham -> SpringAssignment1
+
+2.	Dependency Injection and Inversion of Control
+
+	Assignment 1: Spring_Assignments -> SpringJDBC -> src -> main -> java -> SpringBasicAssignment2
+
+	Assignment 2: Spring_Assignments -> SpringJDBC -> src -> main -> java -> com -> shubham -> SpringAssignment2_2
+
+3.	Aspect Oriented Programming
+•	Assignment 1: Spring_Assignments -> SpringAOP2
+
+4.	Spring Database Access
+•	Assignment 1: Spring_Assignments -> SpringJDBC -> src -> main -> java -> com -> shubham -> SpringJDBCSpring_Assignments -> SpringJDBC
+
+•	Assignment 2: Spring_Assignments -> SpringHibernateAssignment -> src -> main -> java -> com ->shubham\SpringHibernateAssignment
+
+
+5.	Spring MVC
+•	Assignment 1: Spring_Assignments -> SpringMVC
+
+
+
+

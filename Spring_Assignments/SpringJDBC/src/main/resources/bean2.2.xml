@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+<bean id="player1" class="com.shubham.SpringAssignment2_2.Player">
+<property name="playerId" value="P001"/>
+<property name="playerName" value="Sachin Tendulkar"/>
+<property name="countryName" ref="country0"/>
+</bean>
+
+<bean id="player2" class="com.shubham.SpringAssignment2_2.Player">
+<property name="playerId" value="P002"/>
+<property name="playerName" value="Ricky Pointing"/>
+<property name="countryName" ref="country1"/>
+</bean>
+
+<bean id="player3" class="com.shubham.SpringAssignment2_2.Player">
+<property name="playerId" value="P003"/>
+<property name="playerName" value="MS Dhoni"/>
+<property name="countryName" ref="country0"/>
+</bean>
+
+<bean id="player4" class="com.shubham.SpringAssignment2_2.Player">
+<property name="playerId" value="P004"/>
+<property name="playerName" value="Virat Kohli"/>
+<property name="countryName" ref="country0"/>
+</bean>
+
+<bean id="player5" class="com.shubham.SpringAssignment2_2.Player">
+<property name="playerId" value="P005"/>
+<property name="playerName" value="Mathew Hayden"/>
+<property name="countryName" ref="country1"/>
+</bean>
+
+<bean id="country0" class="com.shubham.SpringAssignment2_2.Country">
+<property name="countryId" value="C001"/>
+<property name="countryName" value="India"/>
+<property name="player">
+<list>
+<ref bean="player1" />      
+<ref bean="player3" />
+<ref bean="player4" />
+</list>
+</property>
+</bean>
+
+<bean id="country1" class="com.shubham.SpringAssignment2_2.Country">
+<property name="countryId" value="C002"/>
+<property name="countryName" value="Australia"/>
+<property name="player">
+<list>
+<ref bean="player2" />      
+<ref bean="player5" />
+</list>
+</property>
+</bean>
+
+
+</beans>

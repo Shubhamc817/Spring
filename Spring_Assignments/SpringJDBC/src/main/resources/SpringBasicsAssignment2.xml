@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+<bean id="student0" class="SpringBasicAssignment2.Student">
+<property name="studentid" value="S001"/>
+<property name="studentName" value="Shaheen Ghazala"/>
+<property name="studentTest">
+<list><ref bean="test0" /></list>
+</property>
+</bean>
+
+<bean id="student1" class="SpringBasicAssignment2.Student">
+<property name="studentid" value="S002"/>
+<property name="studentName" value="Shubham Choudhary"/>
+<property name="studentTest">
+
+<list>
+<ref bean="test0" />      
+<ref bean="test1" />
+</list>
+</property>
+</bean>
+
+<bean id="test0" class="SpringBasicAssignment2.Test">
+<property name="testId" value="T001"/>
+<property name="testName" value="Core Java"/>
+<property name="testMarks" value='80'></property>
+</bean>
+
+<bean id="test1" class="SpringBasicAssignment2.Test">
+<property name="testId" value="T002"/>
+<property name="testName" value="Advance Java"/>
+<property name="testMarks" value='90'/>
+</bean>
+
+</beans>
+
+
+
+
